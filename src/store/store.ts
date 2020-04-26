@@ -1,8 +1,10 @@
 import {ThunkAction, Action, combineReducers, createStore} from '@reduxjs/toolkit';
 import counter from "./counter";
+import user from "./user";
 
 const rootReducer = combineReducers({
-    counter
+    counter,
+    user
 });
 
 export const store = createStore(rootReducer);
