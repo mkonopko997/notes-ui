@@ -22,31 +22,20 @@ export const getTokenFromSessionStorage = async (
   }
 };
 
-export const login = (username: string, password: string) => async (
-  dispatch: Dispatch,
-) => {
-  const response = await request('auth', {
-    method: 'POST',
-    body: JSON.stringify({ username, password }),
-  });
-  await dispatch(setToken(response.data));
-  password = '';
-};
-
 export const loginByFacebook = (
   id: string,
   name: string,
   email: string,
   accessToken: string,
 ) => async (dispatch: Dispatch) => {
-  const response = await request('users/login-by-facebook', {
+  const response = await request('auth', {
     method: 'POST',
     body: JSON.stringify({ id, name, email, accessToken }),
   });
 
-  if (response.result === ':)') {
-    await dispatch(setToken(response.data.token));
+  if (response) {
+    await dispatch(setToken(response.token));
   } else {
-    alert(response.message);
+    alert("Auth failed");
   }
 };

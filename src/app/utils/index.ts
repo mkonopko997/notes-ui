@@ -1,7 +1,7 @@
 import {setToken} from "../../store/user/actions";
 import {store} from "../../store/store";
 
-const API_URL = "http://localhost:8080";
+const API_URL = "http://localhost:8080/";
 
 export const request = async (url: string, options: RequestInit = {}) => {
     const response = await fetch(

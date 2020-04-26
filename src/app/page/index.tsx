@@ -22,7 +22,7 @@ const Page = () => {
                 </Switch>
             </div>
         </Router>
-    );
+    )
 };
 
 export default Page;
