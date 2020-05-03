@@ -2,7 +2,16 @@
   "name": "notes-ui",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettify": "prettier --write **/*.ts* --single-quote"
+  },
   "dependencies": {
+    "@material-ui/core": "^4.9.12",
+    "@material-ui/icons": "^4.9.1",
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,24 +20,24 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-facebook-login": "^4.1.1",
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.4",
-    "@types/react-facebook-login": "^4.1.1",
+    "@types/styled-components": "^5.1.0",
+    "node-sass": "^4.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-facebook-login": "^4.1.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "typescript": "~3.8.2",
-    "react-facebook-login": "^4.1.1"
+    "styled-components": "^5.1.0",
+    "typescript": "~3.8.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "prettier": "^1.18.2"
   },
   "eslintConfig": {
     "extends": "react-app"

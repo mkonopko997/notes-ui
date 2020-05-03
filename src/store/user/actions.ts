@@ -1,6 +1,6 @@
 import { SET_TOKEN, UserAction } from './types';
 import { Dispatch } from 'redux';
-import {request} from "../../app/utils";
+import { request } from '../../app/utils';
 
 export const setToken = (token?: string): UserAction => {
   token
@@ -12,9 +12,7 @@ export const setToken = (token?: string): UserAction => {
   };
 };
 
-export const getTokenFromSessionStorage = async (
-  dispatch: Dispatch,
-) => {
+export const getTokenFromSessionStorage = async (dispatch: Dispatch) => {
   const token = await sessionStorage.getItem('token');
   if (token) {
     const r = await dispatch(setToken(token));
@@ -36,6 +34,6 @@ export const loginByFacebook = (
   if (response) {
     await dispatch(setToken(response.token));
   } else {
-    alert("Auth failed");
+    alert('Auth failed');
   }
 };

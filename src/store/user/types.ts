@@ -5,5 +5,4 @@ export type SetTokenAction = {
   payload?: string;
 };
 
-
 export type UserAction = SetTokenAction;

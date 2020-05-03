@@ -1,9 +1,9 @@
-import {CounterAction, DECREMANT, INCREMENT} from "./types";
+import { CounterAction, DECREMANT, INCREMENT } from './types';
 
 export const increment = (): CounterAction => ({
-  type: INCREMENT
+  type: INCREMENT,
 });
 
 export const decrement = (): CounterAction => ({
-  type: DECREMANT
-})
+  type: DECREMANT,
+});

@@ -10,7 +10,7 @@ export default (state = initial, action: UserAction) => {
   if (action.type === SET_TOKEN) {
     return {
       ...state,
-      token: action.payload,
+      token: 'Bearer ' + action.payload,
     };
   }
   return state;
